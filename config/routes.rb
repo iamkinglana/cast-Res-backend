@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :comments, only: [:index, :create]
   resources :reviews, only: [:index, :create]
   resources :users, only: [:index, :create, :update]
-  resources :restaurants, only: [:index, :show]
+  resources :restaurants, only: [:index, :show, :destroy] # Added the destroy action
 
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
