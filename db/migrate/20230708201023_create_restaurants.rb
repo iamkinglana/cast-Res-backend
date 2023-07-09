@@ -7,7 +7,7 @@ class CreateRestaurants < ActiveRecord::Migration[7.0]
       t.string :url
       t.string :description
       t.float :lat
-      t.float :title
+      t.float :lon
 
 
       t.timestamps

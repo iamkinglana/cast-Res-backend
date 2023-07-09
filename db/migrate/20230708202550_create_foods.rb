@@ -7,7 +7,7 @@ class CreateFoods < ActiveRecord::Migration[7.0]
       t.belongs_to :user, null: false, foreign_key: true
       t.string :image
       t.string :toppings
-      t.string :falvoring
+      t.string :flavoring
 
 
       t.timestamps

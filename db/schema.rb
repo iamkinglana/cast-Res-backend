@@ -31,7 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_08_202550) do
     t.bigint "user_id", null: false
     t.string "image"
     t.string "toppings"
-    t.string "falvoring"
+    t.string "flavoring"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_foods_on_restaurant_id"
@@ -45,7 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_08_202550) do
     t.string "url"
     t.string "description"
     t.float "lat"
-    t.float "title"
+    t.float "lon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
