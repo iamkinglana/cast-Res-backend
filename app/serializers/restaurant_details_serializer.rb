@@ -11,4 +11,6 @@ class RestaurantDetailsSerializer < ActiveModel::Serializer
     ratings = reviews.map do |rev|
       rev.rating
     end
-    ratings.then{ |r| r.sum.to_f / r.size }end
+    ratings.then{ |r| r.sum.to_f / r.size }
+  end
+end

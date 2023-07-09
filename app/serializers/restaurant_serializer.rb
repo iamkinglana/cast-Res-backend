@@ -1,5 +1,5 @@
 class RestaurantSerializer < ActiveModel::Serializer
-  attributes :id, :name, :image, :description, :avg_rating, :all_condiments_toppings, :lat, :lon
+  attributes :id, :name, :image, :description, :avg_rating, :all_flavoring_toppings, :lat, :lon
   has_many :foods
 
   def avg_rating
@@ -10,14 +10,14 @@ class RestaurantSerializer < ActiveModel::Serializer
     ratings.then{ |r| r.sum.to_f / r.size }.to_s
   end
 
-  def all_condiments_toppings
-    all_condiments + all_toppings
+  def all_flavoring_toppings
+    all_flavoring + all_toppings
   end
 
   private
 
   def all_flavoring
-    self.object.foods.map(&:condiments).join(", ")
+    self.object.foods.map(&:flavoring).join(", ")
   end
 
   def all_toppings
