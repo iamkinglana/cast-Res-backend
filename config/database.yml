@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: cast_Res_backend_production
-  username: cast_Res_backend
-  password: <%= ENV["CAST_RES_BACKEND_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
